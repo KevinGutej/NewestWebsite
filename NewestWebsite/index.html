@@ -17,17 +17,39 @@
 </head>
 
 <body class="main-content">
-    <header class="section section1 header active">
-
+    <header class="section section1 header active" id="home">
+        <div class="header-content">
+            <div class="left-header">
+                <div class="header-shape">
+                    <!-- image -->
+                </div>
+            </div>
+            <div class="right-header">
+                <h1 class="name">
+                    Hey, I'm <span>Kevin.</span>
+                    A Front-Web Developer.
+                </h1>
+                <p>
+                    I'm a Front Web Developer and program in many other programming languages, such as Python, C++, PHP.
+                    I always have many ideas on what to add to a website and enjoy writing my code.
+                    I have created many programs such as a libraryMangement, Calculators in most programming languages,
+                    CeaserCipherEncryptor...
+                </p>
+                <a href="main-button">
+                    <span class="button-text">Download CV</span>
+                    <span class = "button-icon"><i class = "fas fa-dowload"></i></span>
+                </a>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="section section2 about"></section>
-        <section class="section section3 portfolio"></section>
-        <section class="section section4 blogs"></section>
-        <section class="section section5 contact"></section>
+        <section class="section section2 about" id="about"></section>
+        <section class="section section3 portfolio" id="portfolio"></section>
+        <section class="section section4 blogs" id="blogs"></section>
+        <section class="section section5 contact" id="contact"></section>
     </main>
     <div class="controlls">
-        <div class="control control-1 active-button">
+        <div class="control control-1 active-button" data-id="home">
             <i class="fas fa-home"></i>
         </div>
         <div class="control control-2" data-id="about">
@@ -45,5 +67,6 @@
     </div>
 
 </body>
-    <script src="application.js"></script>
+<script src="application.js"></script>
+
 </html>

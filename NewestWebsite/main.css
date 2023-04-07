@@ -59,6 +59,11 @@ section {
     background-color: var(--color-primary);
 }
 
+.section1 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
 .section2 {
     display: none;
     transform: translateY(0) scale(1);
@@ -77,6 +82,19 @@ section {
 .section5 {
     display: none;
     transform: translateY(0) scale(1);
+}
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    }
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0);
+        }
+        100%{
+            transform: translateY(0) scaleY(1);
+        }
 }
 
 .controlls {
@@ -118,4 +136,28 @@ section {
 
 .active-button i{
     color: var(--color-white) !important;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-shape {
+    transition: all .4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 49% 0, 100% 100%, 0% 100%);
 }
