@@ -31,4 +31,4 @@ allSections.addEventListener('click', (e) =>{
 }) 
 
 
-transition()();
+transition();
