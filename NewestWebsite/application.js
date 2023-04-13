@@ -2,6 +2,7 @@ const sections = document.querySelectorAll('.section');
 const sectButtons = document.querySelectorAll('.controlls');
 const sectButton = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content')
+const codeDisplay = document.getElementById("code-display");
 
 function transition() {
     for(let i = 0; i < sectButton.length; i++) {
@@ -35,5 +36,20 @@ function transition() {
             let element = document.body;
             element.classList.toggle('light-mode')
         })
+
+        
+        document.querySelector("a").addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", this.getAttribute("href"));
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    codeDisplay.textContent = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+
 }
 transition();

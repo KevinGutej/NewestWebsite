@@ -683,3 +683,11 @@ section {
 @import 'media.scss';
 
 /* 2:48:53 */
+
+#code-display {
+    margin-top: 20px;
+    padding: 10px;
+    font-family: monospace;
+    background-color: #eee;
+    border: 1px solid #999;
+}
