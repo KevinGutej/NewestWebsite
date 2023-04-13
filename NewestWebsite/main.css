@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -481,6 +481,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.sources-text {
+    font-size: 15px;
 }
 
 .icon {
@@ -504,11 +509,11 @@ section {
 }
 
 .icon:hover {
-    background-color: var(--color-grey-3);
+    background-color: black;
 }
 
 .icon:hover i {
-    color: black;
+    color: white;
 }
 
 .portfolio-item:hover .hover-item {
@@ -674,3 +679,7 @@ section {
     font-size: 1.4rem;
     pointer-events: none;
 }
+
+@import 'media.scss';
+
+/* 2:48:53 */
