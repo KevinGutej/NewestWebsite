@@ -1,0 +1,200 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="msform">
+    <fieldset>
+      <h2 class="fs-title">Create your account</h2>
+      <input type="login" name="login" placeholder="Login" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="number" name="age" placeholder="Age" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="password" name="cpass" placeholder="Confirm Password" />
+      <input type="button" name="next" class="next action-button" value="Submit">
+      <a href="/SignIn.html" class="sign-in-link">Click here to Sign In</a>
+    </fieldset>
+  </form>
+</body>
+
+</html>
+
+SIGNIN.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  
+    <div class = "nav">
+      <h1 class = "contact-link">CONTACT <a href="contact.html"></a></h1>
+      
+    </div>
+  <form id="msform">
+    <fieldset>
+        <h2 class="fs-title">Sign In</h2>
+      <input type="login" name="login" placeholder="Login" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="button" name="next" class="next action-button" value="Submit">
+      <a href="/index.html" class="sign-in-link">Create Account</a>
+    </fieldset>
+  </form>
+</body>
+
+</html>
+
+CONTACT.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-contact">
+        
+    </div>
+</body>
+</html>
+
+MAIN.css
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+html {
+  height: 100%;
+  width: 100%;
+  background: rgb(2,0,36);
+    background: linear-gradient(60deg, #3F0071,#FB2576,#332FD0,#0002A1);
+    background-size: 600% 600%;
+    animation: color 15s infinite linear;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 85%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0% 85%;
+  }
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+
+#msform {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 50% 10%;
+  position: relative;
+}
+
+/*Hiding all fields except first 1 as password should be covered*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+
+#msform .action-button {
+  width: 100px;
+  background: #27AE60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.sign-in-link {
+  font-size: small;
+  color: black;
+}
+.sign-in-link:hover {
+  color: blue;
+  transition: 1s;
+}
+.contact-link {
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.contact-link:hover {
+  transition: 2s;
+  color: red;
+  cursor: pointer;
+}
+.nav {
+  background-color: white;
+}
+.main-contact {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}   
