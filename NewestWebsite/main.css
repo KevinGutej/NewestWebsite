@@ -739,4 +739,41 @@ section {
       .controlls .control {
         margin: 1rem 0.3rem;
       }
+      .about-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .about-container .right-about {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 2.5rem;
+      }
+      .about-container .left-about {
+        padding-right: 0;
+      }
+      .about-container .left-about p {
+        padding-left: 0;
+      }
+    
+      .time-line {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 6rem;
+      }
+      .contact-container {
+        padding: 2rem 2.5rem !important;
+      }
+    
+      .about-stats .progress-bars {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    
+      .portfolios {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 6rem;
+        margin-top: 1rem;
+      }
+    
+      .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 6rem;
+      }
+    
 }
